@@ -1,0 +1,27 @@
+{
+  "name": "firefly-utils",
+  "version": "1.0.0",
+  "description": "A Library to flatten and unflatten and find values.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jugnuagrawal/firefly-utils.git"
+  },
+  "keywords": [
+    "Object",
+    "Utils",
+    "Flatten",
+    "Unflatten",
+    "Values",
+    "Clone"
+  ],
+  "author": "Jugnu Agrawal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jugnuagrawal/firefly-utils/issues"
+  },
+  "homepage": "https://github.com/jugnuagrawal/firefly-utils#readme"
+}
