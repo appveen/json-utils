@@ -1,7 +1,7 @@
 {
   "name": "firefly-utils",
   "version": "1.0.0",
-  "description": "Flatten object, unflatten object and find n level value",
+  "description": "Flatten object, unflatten object and find n level value and much more",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,11 @@
     "Flatten",
     "Unflatten",
     "Values",
-    "Clone"
+    "Clone",
+    "Merge",
+    "Delete",
+    "Manage data using path",
+    "Object to Array conversion"
   ],
   "author": "Jugnu Agrawal",
   "license": "MIT",
