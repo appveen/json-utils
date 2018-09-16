@@ -139,12 +139,47 @@ const data = {
     contact:{
         code:'+91',
         number:1231231230
-    }
+    },
+    addressList:[
+        {
+            houseNo:'101',
+            street:'first street',
+            state:'john state'
+        },
+        {
+            houseNo:'102',
+            street:'second street',
+            state:'james state'
+        }
+    ]
 };
 
 utils.getValue('name.firstName', data);
 /* output
 John
+*/
+
+// Use array as path
+
+utils.getValue(['name','firstName'], data);
+/* output
+John
+*/
+
+// Accessing array data
+
+utils.getValue(['addressList',0], data);
+/* output
+{
+    houseNo:'101',
+    street:'first street',
+    state:'john state'
+}
+*/
+
+utils.getValue(['addressList',0,'houseNo'], data);
+/* output
+101
 */
 
 // you can provide your own separator
