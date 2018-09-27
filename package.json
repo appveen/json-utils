@@ -1,6 +1,6 @@
 {
   "name": "firefly-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Flatten object, unflatten object and find n level value and much more",
   "main": "index.js",
   "scripts": {
