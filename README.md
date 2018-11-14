@@ -1,5 +1,5 @@
-# firefly-utils
-Common Object utility to make life easier.
+# json-utils
+Common JSON utility to make life easier.
 
 
 ## APIs
@@ -20,18 +20,18 @@ Common Object utility to make life easier.
 
 ## Setup
 ```sh
-$ npm i --save firefly-utils
+$ npm i --save @appveen/json-utils
 ```
 
 ## ObjectUtils
 
 ```javascript
-const utils = require('firefly-utils').ObjectUtils;
+const utils = require('json-utils').ObjectUtils;
 ```
 
 ## flatten
 
-Converts a nested obeject structure to one level.
+Converts a nested object structure to one level.
 
 ```javascript
 const data = {
@@ -56,19 +56,6 @@ utils.flatten(data);
     contact.number:1231231230
 }
 */
-
-// you can provide your own separator
-
-utils.flatten(data, '#'); 
-/* output
-{
-    name#firstName:'John',
-    name#lastName:'Doe',
-    email:'john@doe.com',
-    contact#code:'+91',
-    contact#number:1231231230
-}
-*/
 ```
 
 ## unFlatten
@@ -85,31 +72,6 @@ const data = {
 };
 
 utils.unFlatten(data);
-/* output
-{
-    name:{
-        firstName:'John',
-        lastName:'Doe'
-    },
-    email:'john@doe.com',
-    contact:{
-        code:'+91',
-        number:1231231230
-    }
-}
-*/
-
-// you can provide your own separator
-
-const data = {
-    'name$firstName':'John',
-    'name$lastName':'Doe',
-    'email':'john@doe.com',
-    'contact$code':'+91',
-    'contact$number':1231231230
-};
-
-utils.unFlatten(data, '$'); 
 /* output
 {
     name:{
@@ -181,13 +143,6 @@ utils.getValue(['addressList',0,'houseNo'], data);
 /* output
 101
 */
-
-// you can provide your own separator
-
-utils.getValue('name@firstName', data, '@');
-/* output
-John
-*/
 ```
 
 ## setValue
@@ -208,24 +163,6 @@ const data = {
 };
 
 utils.setValue('name.title', data, 'Mr.');
-/* data object is updated to
-{
-    name:{
-        title:'Mr',
-        firstName:'John',
-        lastName:'Doe'
-    },
-    email:'john@doe.com',
-    contact:{
-        code:'+91',
-        number:1231231230
-    }
-}
-*/
-
-// you can provide your own separator
-
-utils.setValue('name@title', data, 'Mr.', '@');
 /* data object is updated to
 {
     name:{
@@ -273,21 +210,6 @@ utils.deleteValue('contact.code', data);
 }
 */
 
-// you can provide your own separator
-
-utils.deleteValue('contact@code', data, '@');
-/* data object is updated to
-{
-    name:{
-        firstName:'John',
-        lastName:'Doe'
-    },
-    email:'john@doe.com',
-    contact:{
-        number:1231231230
-    }
-}
-*/
 ```
 
 ## deepmerge
@@ -441,7 +363,7 @@ utils.convertToArray(data, true);
 ## CryptUtils
 
 ```javascript
-const utils = require('firefly-utils').CryptUtils;
+const utils = require('json-utils').CryptUtils;
 ```
 
 ## encrypt

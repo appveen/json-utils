@@ -1,6 +1,6 @@
 {
-  "name": "firefly-utils",
-  "version": "1.0.2",
+  "name": "@appveen/json-utils",
+  "version": "1.0.0",
   "description": "Flatten object, unflatten object and find n level value and much more",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jugnuagrawal/firefly-utils.git"
+    "url": "git+https://github.com/appveen/json-utils.git"
   },
   "keywords": [
     "Object",
@@ -25,9 +25,9 @@
   "author": "Jugnu Agrawal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jugnuagrawal/firefly-utils/issues"
+    "url": "https://github.com/appveen/json-utils/issues"
   },
-  "homepage": "https://github.com/jugnuagrawal/firefly-utils#readme",
+  "homepage": "https://github.com/appveen/json-utils#readme",
   "dependencies": {
     "deepmerge": "^2.1.1"
   }
